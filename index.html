@@ -5,65 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자판기</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
     <div class="wrapper">
       <!-- 헤더 -->
       <header>
-        <a class="logo" href="index.html"
-          ><img src="images/Group.png" alt="벤딩머신 로고"
-        /></a>
+        <a class="logo" href="index2.html">
+          <img src="svgimgs/banner.svg" alt="벤딩머신 로고" />
+        </a>
       </header>
       <!-- // 헤더 -->
 
       <!-- 메인 -->
       <main>
-        <!-- 메인으로 가운데 정렬 해줘야할듯-->
-        <!--섹션태그로 바꿔야하나-->
         <div class="container">
+          <!-- vending-machine -->
           <div class="vending-machine">
-            <!--그리드, 플렉스 중 무엇이 더 나은가-->
             <div class="beverages">
-              <div class="bvrg-type">
-                <img src="images/콜라.png" alt="오리지널 콜라" />
-                <p class="bvrg-name">Original_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type original">
+                <div class="line-up">
+                  <img src="svgimgs/coke-red.svg" alt="오리지널 콜라" />
+                  <p class="bvrg-name">Original_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
-              <div class="bvrg-type">
-                <img
-                  src="images/바이올렛콜라.png"
-                  alt="바이올렛 콜라"
-                />
-                <p class="bvrg-name">Violet_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type violet">
+                <div class="sold-out">
+                  <img src="svgimgs/soldout.svg" alt="매진"/>
+                </div>
+                <div class="line-up">
+                  <img
+                    src="svgimgs/coke-violet.svg"
+                    alt="바이올렛 콜라"
+                  />
+                  <p class="bvrg-name">Violet_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
-              <div class="bvrg-type">
-                <img src="images/노란콜라.png" alt="옐로우 콜라" />
-                <p class="bvrg-name">Yellow_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type yellow">
+                <div class="line-up">
+                  <img src="svgimgs/coke-yellow.svg" alt="옐로우 콜라" />
+                  <p class="bvrg-name">Yellow_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
-              <div class="bvrg-type">
-                <img src="images/파란콜라.png" alt="쿨 콜라" />
-                <p class="bvrg-name">Cool_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type cool">
+                <div class="line-up">
+                  <img src="svgimgs/coke-cool.svg" alt="쿨 콜라" />
+                  <p class="bvrg-name">Cool_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
-              <div class="bvrg-type">
-                <img src="images/초록콜라.png" alt="그린 콜라" />
-                <p class="bvrg-name">Green_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type green">
+                <div class="line-up">
+                  <img src="svgimgs/coke-green.svg" alt="그린 콜라" />
+                  <p class="bvrg-name">Green_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
-              <div class="bvrg-type">
-                <img src="images/주황콜라.png" alt="오렌지 콜라" />
-                <p class="bvrg-name">Orange_Cola</p>
-                <button class="btn-select">1000원</button>
+              <div class="bvrg-type orange">
+                <div class="line-up">
+                  <img src="svgimgs/coke-orange.svg" alt="오렌지 콜라" />
+                  <p class="bvrg-name">Orange_Cola</p>
+                  <button class="btn-select">1000원</button>
+                </div>
               </div>
             </div>
-            <div class="balance"></div>
-            <div class="insert-money"></div>
+            <div class="balance">
+              <form>
+                <div class="wrap">
+                  <p>잔액:</p>
+                  <output>1,000 원</output>
+                </div>
+                <button type="submit">거스름돈 반환</button>
+              </form>
+            </div>
+            <div class="insert-money">
+              <form>
+                <input type="text" placeholder="입금액 입력" />
+                <button type="submit">입금</button>
+              </form>
+            </div>
+            <div class="output">
+              <div class="selected-box">
+                <div class="selected-bvrg">
+                  <img src="svgimgs/coke-red.svg" alt="오리지널 콜라" />
+                  <p>Original-Cola</p>
+                  <div>1</div>
+                </div>
+                <div class="selected-bvrg">
+                  <img src="svgimgs/coke-green.svg" alt="그린 콜라" />
+                  <p>Green-Cola</p>
+                  <div>2</div>
+                </div>
+              </div>
+              <button>획득</button>
+            </div>
           </div>
-          <div class="wallet"></div>
-          <div class="output"></div>
+          <!-- // vending-machine -->
+          <!-- wallet -->
+          <div class="wallet">
+            <div>
+              <form>
+                <div class="wrap">
+                  <p>소지금:</p>
+                  <output>25,000 원</output>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- // wallet -->
+          <!-- shopping-bag -->
+          <div class="shopping-bag">
+            <p class="title">획득한 음료</p>
+            <div class="obtained-box">
+              <div class="obtained-bvrg">
+                <img src="svgimgs/coke-red.svg" alt="오리지널 콜라" />
+                <p>Original-Cola</p>
+                <div>1</div>
+              </div>
+              <div class="obtained-bvrg">
+                <img src="svgimgs/coke-green.svg" alt="그린 콜라" />
+                <p>Green-Cola</p>
+                <div>2</div>
+              </div>
+              <div class="obtained-bvrg">
+                <img src="svgimgs/coke-orange.svg" alt="오렌지 콜라" />
+                <p>Orange-Cola</p>
+                <div>1</div>
+              </div>
+              <div class="obtained-bvrg">
+                <img
+                  src="svgimgs/coke-violet.svg"
+                  alt="바이올렛 콜라"
+                />
+                <p>Violet-Cola</p>
+                <div>5</div>
+              </div>
+            </div>
+            <p class="total-price">총 금액: 9,000 원</p>
+          </div>
+
+          <!-- // shopping-bag -->
         </div>
       </main>
       <!-- //메인 -->
